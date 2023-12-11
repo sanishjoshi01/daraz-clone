@@ -1,0 +1,162 @@
+/*global*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+body{
+    margin: auto;
+    padding: auto;
+    height: 200vh;
+    font-family: 'Roboto', 'Helvetica';  
+    /* background-color: #F5F5F5; */
+    background-color: black;
+}
+
+/* navigation */
+.header{
+    background-color: #F85606;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+.top-main{
+    width: 100%;
+    background-color: #F85606;
+}
+.top-main .leftTop ul{
+    margin: 0 11%;
+    overflow: hidden;
+    display: flex;
+    gap:2em;
+    padding: 6px 0;
+    position:relative
+}
+.top-main .leftTop ul li{
+    float: left;
+}
+#right{
+    float: right;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 13px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.top-main .leftTop ul a{
+    color: white;
+    display: block;
+    font-size: 12px;
+}
+.main{
+    padding: 10px 0;
+    margin: 0 11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search-box-container{
+    position:relative;
+}
+.search-box-container .searchBox{
+    width: 700px;
+    border: 0;
+    border-radius: 12px;
+    padding: 12px;
+}
+.search-box-container .glass{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+.search-box-container .glass i{
+    font-size: 1rem;
+    background-color: #FFE1D2;
+    border-radius: 6px;
+    padding: 6px 16px;
+    color: #F85606;
+}
+
+/* menu */
+.menu{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12.5px;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu ul li a{
+    color: white;
+    font-weight: bold;
+    padding: 10px 12px;
+}
+.menu ul li a:hover{
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 8px;
+}   
+.menu ul li a i{
+    font-size: 16px;
+}
+
+/*section 1*/
+.main2{
+    margin: 1% 11%;
+}
+.section-1{
+    display: grid;
+    grid-template-areas:
+    'card-1 card-2 card-2 card-2 card-2 card-2';
+    gap:10px;
+}
+.card-1{
+    height: 348px;
+    grid-area: card-1;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 27px;
+    color: #757575;
+    padding: 10px 0;
+}
+.card-1 li:hover{
+    background-color: #f5f5f5;
+    color: #F85606;
+}           
+.card-2{
+    height: 348px;
+    grid-area: card-2;  
+    border-radius: 12px;
+}
+.card-2{
+}
+.main2 .section-1 div{
+    background-color: white;
+}
+
+/* CUSTOM FONTS */
+/* @font-face{
+    font-family: myFirstFont;
+    src: url(kids.ttf)
+}
+.kids{
+    font-family: myFirstFont !important;
+    color: white;
+} */
+/* CUSTOM FONTS */
