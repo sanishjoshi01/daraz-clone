@@ -162,25 +162,74 @@
             </div>
         </div>
     </section>
+    <br>
+    <section>
+        <div class="category-section">
+            <div class="category-content">
+                <div class="content-items">
+                    <img src="images/products/product1.png" alt="" width= "100%">
+                    <p>Mart</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product2.png" alt="" width= "100%">
+                    <p>Beauty</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product3.png" alt="" width= "100%">
+                    <p>Home &#38; Decor</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product4.png" alt="" width= "100%">
+                    <p>Proudly Nepali</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product5.png" alt="" width= "100%">
+                    <p>Men's Fashion</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product6.png" alt="" width= "100%">
+                    <p>Electronic</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product7.png" alt="" width= "100%">
+                    <p>Sale is live</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product8.png" alt="" width= "100%">
+                    <p>Women's Fashion</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product9.png" alt="" width= "100%">
+                    <p>Hobbies</p>
+                </div>
+                <div class="content-items">
+                    <img src="images/products/product10.png" alt="" width= "100%">
+                    <p>Everyday Low Price</p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
     
-<script>
+    <script>
     let slideIndex = 1;
     showSlides(slideIndex);
-    
+
     function plusSlides(n) {
-      showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
     }
-    
+
     function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("image-container");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-    
-      slides[slideIndex-1].style.display = "block";  
+    let i;
+    let slides = document.getElementsByClassName("image-container");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+    }
+
+    slides[slideIndex-1].style.display = "block";  
     }
     </script>
 </body>
