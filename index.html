@@ -48,7 +48,6 @@
             </div>
         </div>
     </header>
-    <br>
     <section>
         <div class="main-content">
             <div class="left-link-container">
@@ -98,7 +97,6 @@
             </div>
         </div>
     </section>
-    <br>
     <section>
         <div class="category-section">
             <div class="category-content">
@@ -108,7 +106,7 @@
                     const imgSrc = 
                     [
                         "product1.png", "product2.png", "product3.png", "product4.png", "product5.png",
-                        "product6.png", "product7.png", "product8.png", "product9.png", "product10.png",
+                        "product6.png", "product7.png", "product8.png", "product9.png", "product10.png"
                     ];
                     const catData = 
                     [
@@ -132,11 +130,49 @@
             </div>
         </div>
     </section>
-    <br>
     <section>
-       
+       <div class="flash-sale">
+            <h3>Flash Sale</h3>
+            <div class="on-sale">
+                    <div class="sale-left">
+                        <p>On Sale Now</p>
+                        <p>
+                            Ending in <span class="timer hour"></span>
+                            <span class="colon">:</span> <span class="timer minute"></span> <span class="colon">:</span>  <span class="timer second"></span>
+                        </p>
+                    </div>
+                    <button id="shop-more">
+                        shop more
+                    </button>
+
+                    <!-- TIMER FUNCTION WITH JS -->
+                    <script>
+                        let hourEl = document.querySelector(".hour");
+                        let minuteEl = document.querySelector(".minute");
+                        let secondEl = document.querySelector(".second");
+
+                        function showTimer(){
+                            const date = new Date();
+                            const hours = 24 - date.getHours();
+                            const minutes = 60 - date.getMinutes();
+                            const seconds = 60 - date.getSeconds();
+                            
+                            let hrlength = hours.toString().length;
+                            let minlength = minutes.toString().length;
+                            let seclength = seconds.toString().length;
+
+                            hourEl.textContent = hrlength == 1 ? "0" + hours : hours;
+                            minuteEl.textContent = minlength == 1 ? "0" + minutes : minutes;
+                            secondEl.textContent = seclength == 1 ? "0" + seconds : seconds;
+                        }
+                        setInterval(showTimer, 0);
+                    </script>
+                    <!--END TIMER FUNCTION WITH JS-->
+            </div>
+       </div>
     </section>
     
+    <!-- SLIDER FUNCTION WITH JS -->
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
