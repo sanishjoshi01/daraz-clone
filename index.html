@@ -52,103 +52,39 @@
     <section>
         <div class="main-content">
             <div class="left-link-container">
-                <ul>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-person-dress icon-card"></i>
-                            </div>
-                            <p>Women's Fashion</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-notes-medical icon-card"></i>
-                            </div>
-                            <p>Health &#38; Beauty</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-shirt icon-card"></i>
-                            </div>
-                            <p>Men's Fashion</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-regular fa-clock icon-card"></i>
-                            </div>
-                            <p>Watches &#38; Accessories</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-laptop icon-card"></i>
-                            </div>
-                            <p>Electronic Devices</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-tv icon-card"></i>
-                            </div>
-                            <p>TV &#38; Home Appliances</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-plug icon-card"></i>
-                            </div>
-                            <p>Electronic Accessories</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-cart-shopping icon-card"></i>
-                            </div>
-                            <p>Groceries &#38; Pets</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-baby icon-card"></i>
-                            </div>
-                            <p>Babies &#38; Toys</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-couch icon-card"></i>
-                            </div>
-                            <p>Home &#38; Lifestyle</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-volleyball icon-card"></i>
-                            </div>
-                            <p>Sports &#38; Outdoor</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="iborder" href="#">
-                            <div class="border">
-                                <i class="fa-solid fa-screwdriver-wrench icon-card"></i>
-                            </div>
-                            <p>Motors, Tools &#38; DIY</p>
-                        </a>
-                    </li>
+                <ul id="ul-el">
+                    <script>
+                        let ulEl = document.querySelector("#ul-el");
+                        const listData = 
+                        [
+                            "Women's Fashion", "Health &#38; Beauty", "Men's Fashion",
+                            "Watches &#38; Accessories", "Electronic Devices", "TV &#38; Home Applianceset", "Electronic Accessories", "Groceries &#38; Pets", "Babies &#38; Toys", "Home &#38; Lifestyle", "Sports &#38; Outdoor", "Motors, Tools &#38; DIY"
+                        ];
+                        const iconData = 
+                        [
+                            "fa-solid fa-person-dress", "fa-solid fa-notes-medical", "fa-solid fa-shirt",
+                            "fa-regular fa-clock", "fa-solid fa-laptop", "fa-solid fa-tv", 
+                            "fa-solid fa-plug", "fa-solid fa-cart-shopping", "fa-solid fa-baby", 
+                            "fa-solid fa-couch", "fa-solid fa-volleyball", "fa-solid fa-screwdriver-wrench"
+
+                        ];
+                        let para = "";
+                        for(let i = 0; i < listData.length; i++)
+                        {
+                            para +=
+                            `
+                                <li>
+                                    <a class="iborder" href="#">
+                                        <div class="border">
+                                            <i class="${iconData[i]} icon-card"></i>
+                                        </div>
+                                            <p class="link-category">${listData[i]}</p>
+                                    </a>
+                                </li>
+                            `;
+                        }
+                        ulEl.innerHTML = para;
+                    </script>
                 </ul>
             </div>
             <div class="right-img-container">
@@ -166,71 +102,60 @@
     <section>
         <div class="category-section">
             <div class="category-content">
-                <div class="content-items">
-                    <img src="images/products/product1.png" alt="" width= "100%">
-                    <p>Mart</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product2.png" alt="" width= "100%">
-                    <p>Beauty</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product3.png" alt="" width= "100%">
-                    <p>Home &#38; Decor</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product4.png" alt="" width= "100%">
-                    <p>Proudly Nepali</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product5.png" alt="" width= "100%">
-                    <p>Men's Fashion</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product6.png" alt="" width= "100%">
-                    <p>Electronic</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product7.png" alt="" width= "100%">
-                    <p>Sale is live</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product8.png" alt="" width= "100%">
-                    <p>Women's Fashion</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product9.png" alt="" width= "100%">
-                    <p>Hobbies</p>
-                </div>
-                <div class="content-items">
-                    <img src="images/products/product10.png" alt="" width= "100%">
-                    <p>Everyday Low Price</p>
-                </div>
-                
-                
+                <script>
+                    let categoryEl = document.querySelector(".category-content");
+
+                    const imgSrc = 
+                    [
+                        "product1.png", "product2.png", "product3.png", "product4.png", "product5.png",
+                        "product6.png", "product7.png", "product8.png", "product9.png", "product10.png",
+                    ];
+                    const catData = 
+                    [
+                        "Mart", "Beauty", "Home &#38; Decor", "Proudly Nepali", "Men's Fashion", "Electronic",
+                        "Sale is live", "Women's Fashion", "Hobbies", "Everyday Low Price"
+                    ]
+
+                    let holder = "";
+                    for(let i = 0; i < imgSrc.length; i++)
+                    {
+                        holder += 
+                        `
+                        <div class="content-items">
+                            <img src="images/products/${imgSrc[i]}" alt="" width= "100%">
+                            <p>${catData[i]}</p>
+                        </div>
+                        `;
+                    }
+                    categoryEl.innerHTML = holder;
+                </script>
             </div>
         </div>
     </section>
+    <br>
+    <section>
+       
+    </section>
     
     <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
-    }
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
 
-    function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("image-container");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-    }
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("image-container");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        }
 
-    slides[slideIndex-1].style.display = "block";  
-    }
+        slides[slideIndex-1].style.display = "block";  
+        }
     </script>
 </body>
 </html>
