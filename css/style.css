@@ -27,7 +27,9 @@ a {
 }
 
 section {
-    margin: 1rem 0;
+    margin: 1rem auto;
+    width: 1188px;
+    max-width: 1188px;
 }
 
 body {
@@ -151,9 +153,6 @@ header {
 /* main-content */
 .main-content {
     display: flex;
-    width: 1188px;
-    max-width: 1188px;
-    margin: auto;
     gap: 1rem;
 }
 
@@ -248,9 +247,6 @@ header {
 
 /* category-content */
 .category-section {
-    width: 1188px;
-    max-width: 1188px;
-    margin: auto;
     height: 136px;
 }
 
@@ -289,9 +285,6 @@ header {
 
 /* flash-sale */
 .flash-sale {
-    width: 1188px;
-    max-width: 1188px;
-    margin: auto;
     margin-top: 2rem;
     border-bottom: 1px solid var(--link-color);
 }
@@ -348,9 +341,6 @@ header {
 
 /* product section */
 .product-section {
-    width: 1188px;
-    max-width: 1188px;
-    margin: auto;
     height: 316px;
     background-color: var(--full-white);
     display: flex;
