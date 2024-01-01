@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="icon" type="image/x-icon" href="/images/fav.png">
     <link rel="stylesheet" href="css/style.css">
     <!-- <script src="https://kit.fontawesome.com/200a6efa5c.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <div class="navbar">
@@ -19,17 +23,17 @@
                     <div class="left-links"><a href="#">Help &#38; Support</a></div>
                     <div class="left-links"><a href="#">Daraz Logistics Partner</a></div>
                 </div>
-                <div class="rightTop">     
+                <div class="rightTop">
                     <div class="save-more">
                         <div class="daraz-icon"></div>
                         <a href="#">Save More on App</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="bottom-nav">
                 <div class="logo">
-                    <img src="images/logo.png" alt="LOGO" width="120px" height= "48px">
+                    <img src="images/logo.png" alt="LOGO" width="120px" height="48px">
                 </div>
                 <div class="search-box-container">
                     <input class="search-input" name="search" type="text" placeholder="Search in Daraz">
@@ -38,7 +42,7 @@
                 <div class="menu">
                     <div class="main-links"><a href="#" class="btn-1"><i class="fa-regular fa-user"></i> Login</a>
                     </div>
-                    <div class="main-links"><a href="#" class="btn-2">  Sign Up</a></div>
+                    <div class="main-links"><a href="#" class="btn-2"> Sign Up</a></div>
                     <div class="main-links"><a href="#" class="btn-3"><i class="fa-solid fa-globe"></i> En </a>
                     </div>
                     <div class="main-links">
@@ -52,7 +56,7 @@
         <div class="main-content">
             <div class="left-link-container">
                 <ul id="ul-el">
-                    
+                    <!-- DATA IS COMING FROM SCRIPT FILE -->
                 </ul>
             </div>
             <div class="right-img-container">
@@ -69,7 +73,7 @@
     <section>
         <div class="category-section">
             <div class="category-content">
-                
+                <!-- DATA IS COMING FROM SCRIPT FILE -->
             </div>
         </div>
     </section>
@@ -77,20 +81,81 @@
         <div class="flash-sale">
             <h3>Flash Sale</h3>
             <div class="on-sale">
-                    <div class="sale-left">
-                        <p>On Sale Now</p>
-                        <p>
-                            Ending in <span class="timer hour"></span>
-                            <span class="colon">:</span> <span class="timer minute"></span> <span class="colon">:</span>  <span class="timer second"></span>
-                        </p>
-                        
-                    </div>
-                    <button id="shop-more">
-                        shop more
-                    </button>
+                <div class="sale-left">
+                    <p id="sale-now">On Sale Now</p>
+                    <p>
+                        <!-- TIMER WILL UPDATE FROM SCRIPT FILE -->
+                        Ending in <span class="timer hour"></span>
+                        <span class="colon">:</span> <span class="timer minute"></span> <span class="colon">:</span>
+                        <span class="timer second"></span>
+                    </p>
+                </div>
+                <button id="shop-more">
+                    shop more
+                </button>
             </div>
-       </div>
+        </div>
+        <div class="product-section">
+
+        </div>
+        <script>
+            let productsEl = document.querySelector(".product-section");
+
+            const productImage =
+                [
+                    "prod1.jpg", "prod2.jpg", "prod3.jpg", "prod4.jpg", "prod5.jpg", "prod6.jpg"
+                ];
+            const productTitle =
+                [
+                    "Bike Riding Gloves Anti-Skid Touchscreen Windproof And Water Repellent Fleece Lined Gloves",
+                    "TWS L21 The Best Budget Wireless Earbuds",
+                    "Atomic Habits By James Clear - Self Development Books | Atomic Habits English Edition | Self Help Books |",
+                    "11 In 1 Stainless Steel Swiss Folding Knife Tactical Knife Army Knives Pocket Hunting Outdoor Camping",
+                    "M10 Wireless TWS Earbuds Version 5.1 | Digital Display | 15 Hours Play Time | 2 Hours Charging Time",
+                    "badgePure Jamun Honey 300 gm"
+
+                ];
+            const productPrice =
+                [
+                    "Rs. 345", "Rs. 897", "Rs. 185", "Rs. 325", "Rs. 895", "Rs. 650"
+                ];
+            const productDiscount =
+                [
+                    "Rs. 699 ", "Rs. 1,999", "Rs. 800", "Rs. 500", "Rs. 2,000", ""
+                ];
+            const productDiscountPer =
+                [
+                    "-50%", "-55%", "-77%", "-35%", "-55%", ""
+                ];
+
+
+            let productHolder = "";
+            for (let i = 0; i < productTitle.length; i++) {
+                productHolder +=
+                    `
+                    <a href="#" class="card-container">
+                        <div class="card-img">
+                            <img src="images/prod/${productImage[i]}" alt="${productImage[i]}">
+                        </div>
+                        <div class="card-info">
+                            <div class="title">
+                                ${productTitle[i]}
+                            </div>
+                            <div class="price">
+                                ${productPrice[i]}
+                            </div>
+                            <div class="discount">
+                                <p>${productDiscount[i]} </p>
+                                <span id="discount-text">${productDiscountPer[i]}</span>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            }
+            productsEl.innerHTML = productHolder;
+        </script>
     </section>
     <script src="script.js"></script>
 </body>
+
 </html>

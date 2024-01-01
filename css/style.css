@@ -11,6 +11,7 @@
     --bg-header: #F85606;
     --bg-search-icon: #FFE1D2;
     --link-color: #757575;
+    --full-black: black;
 }
 
 ul {
@@ -291,8 +292,8 @@ header {
     width: 1188px;
     max-width: 1188px;
     margin: auto;
-    height: 136px;
     margin-top: 2rem;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .flash-sale h3 {
@@ -315,6 +316,10 @@ header {
     align-items: center;
 }
 
+#sale-now {
+    color: var(--bg-header);
+}
+
 .timer {
     background-color: var(--bg-header);
     color: var(--full-white);
@@ -324,6 +329,7 @@ header {
     height: 35px;
     line-height: 35px;
     font-size: 16px;
+    border-radius: 2px;
 }
 
 .colon {
@@ -337,4 +343,61 @@ header {
     text-transform: uppercase;
     color: var(--bg-header);
     cursor: pointer;
+    border-radius: 2px;
+}
+
+/* product section */
+.product-section {
+    width: 1188px;
+    max-width: 1188px;
+    margin: auto;
+    height: 316px;
+    background-color: var(--full-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-container {
+    height: 290px;
+    color: var(--full-black);
+}
+
+.card-container:hover {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+.card-img img {
+    width: 188px;
+    height: 188px;
+}
+
+.card-info {
+    width: 188px;
+    padding: 6px;
+}
+
+.card-info .title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+}
+
+.card-info .price {
+    font-size: 22px;
+    color: var(--bg-header);
+}
+
+.card-info .discount {
+    display: flex;
+    font-size: 12px;
+    gap: 0.6rem;
+}
+
+.card-info .discount p {
+    text-decoration: line-through;
+    color: var(--link-color);
 }
