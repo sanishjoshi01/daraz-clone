@@ -159,4 +159,46 @@ for (let i = 0; i < productTitle.length; i++) {
 }
 productsEl.innerHTML = productHolder;
 
+// DARAZ MALL -- START product-section-one
 
+const vendorEl = document.querySelector("#shop-section-el");
+
+const shopProductImg =
+    [
+        "prod1.jpg", "prod2.jpg", "prod3.jpg", "prod4.jpg", "prod5.jpg", "prod6.jpg"
+    ];
+const shopImg =
+    [
+        "sell1.png", "sell2.png", "sell3.jpeg", "sell4.png", "sell5.jpeg", "sell6.png"
+    ];
+const shopName =
+    [
+        "Chicco", "Bagmati Plastics", "Pulchowki Books", "Fancyra", "Viopatch", "Naturo Earth"
+    ];
+const shopSlogan = [
+    "Chicco", "Bagmati Plastics", "Pulchowki Books", "Feel the joy", "Muscle pain relief patch", "Natural Products"
+]
+
+let shopHolder = "";
+for (let i = 0; i < shopProductImg.length; i++) {
+    shopHolder +=
+        `
+        <a href="#" class="card-container-two">
+            <div id="shop-img">
+                <div id="shadow"></div>
+                <img src="images/shop/${shopProductImg[i]}" alt="">
+            </div>
+
+            <div id="shop-details">
+                <img src="images/shop/${shopImg[i]}" alt="">
+                <div id="shop-name">
+                    ${shopName[i]}
+                </div>
+                <div id="shop-slogan">
+                    ${shopSlogan[i]}
+                </div>
+            </div>
+        </a>
+    `;
+}
+vendorEl.innerHTML = shopHolder;
