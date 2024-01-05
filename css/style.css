@@ -13,6 +13,8 @@
     --link-color: #757575;
     --full-black: black;
     --clr-title: #424242;
+    --box-shadow-60: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    ;
 }
 
 ul {
@@ -362,7 +364,7 @@ header {
 }
 
 .card-container:hover {
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: var(--box-shadow-60);
 }
 
 .card-img img,
@@ -452,7 +454,7 @@ header {
 #shop-details img {
     width: 52px;
     height: 52px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: var(--box-shadow-60);
     position: absolute;
     top: -25px;
 }
@@ -475,5 +477,7 @@ header {
 }
 
 .card-container-two:hover {
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: var(--box-shadow-60);
 }
+
+/* Categories */

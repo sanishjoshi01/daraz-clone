@@ -159,8 +159,8 @@ for (let i = 0; i < productTitle.length; i++) {
 }
 productsEl.innerHTML = productHolder;
 
-// DARAZ MALL -- START product-section-one
 
+// DARAZ MALL -- START product-section-one
 const vendorEl = document.querySelector("#shop-section-el");
 
 const shopProductImg =
@@ -202,3 +202,6 @@ for (let i = 0; i < shopProductImg.length; i++) {
     `;
 }
 vendorEl.innerHTML = shopHolder;
+
+// CATEGORY MALL -- START product-section-one
+const catEl = document.querySelector("#cat-section-el");
