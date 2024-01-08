@@ -233,20 +233,67 @@ catEl.innerHTML = catHolder;
 
 // JUST FOR YOU
 // DARAZ MALL -- START product-section-one
-const forYouEl = document.querySelector("#for-you-section-el");
+let productsElTwo = document.querySelector(".product-section-two");
 
-// const forYouProductImg =
-//     [
-//         "prod1.jpg", "prod2.jpg", "prod3.jpg", "prod4.jpg", "prod5.jpg", "prod6.jpg"
-//     ];
-// const forYouImg =
-//     [
-//         "sell1.png", "sell2.png", "sell3.jpeg", "sell4.png", "sell5.jpeg", "sell6.png"
-//     ];
-// const forYouName =
-//     [
-//         "Chicco", "Bagmati Plastics", "Pulchowki Books", "Fancyra", "Viopatch", "Naturo Earth"
-//     ];
-// const forYouSlogan = [
-//     "Chicco", "Bagmati Plastics", "Pulchowki Books", "Feel the joy", "Muscle pain relief patch", "Natural Products"
-// ]
+const productImageTwo =
+    [
+        "prod1.jpg", "prod2.jpg", "prod3.jpg", "prod4.jpg", "prod5.jpg", "prod6.jpg",
+        "prod1.jpg", "prod2.jpg", "prod3.jpg", "prod4.jpg", "prod5.jpg", "prod6.jpg"
+    ];
+const productTitleTwo =
+    [
+        "Bike Riding Gloves Anti-Skid Touchscreen Windproof And Water Repellent Fleece Lined Gloves",
+        "TWS L21 The Best Budget Wireless Earbuds",
+        "Atomic Habits By James Clear - Self Development Books | Atomic Habits English Edition | Self Help Books |",
+        "11 In 1 Stainless Steel Swiss Folding Knife Tactical Knife Army Knives Pocket Hunting Outdoor Camping",
+        "M10 Wireless TWS Earbuds Version 5.1 | Digital Display | 15 Hours Play Time | 2 Hours Charging Time",
+        "badgePure Jamun Honey 300 gm",
+        "Bike Riding Gloves Anti-Skid Touchscreen Windproof And Water Repellent Fleece Lined Gloves",
+        "TWS L21 The Best Budget Wireless Earbuds",
+        "Atomic Habits By James Clear - Self Development Books | Atomic Habits English Edition | Self Help Books |",
+        "11 In 1 Stainless Steel Swiss Folding Knife Tactical Knife Army Knives Pocket Hunting Outdoor Camping",
+        "M10 Wireless TWS Earbuds Version 5.1 | Digital Display | 15 Hours Play Time | 2 Hours Charging Time",
+        "badgePure Jamun Honey 300 gm"
+
+    ];
+const productPriceTwo =
+    [
+        "Rs. 345", "Rs. 897", "Rs. 185", "Rs. 325", "Rs. 895", "Rs. 650",
+        "Rs. 345", "Rs. 897", "Rs. 185", "Rs. 325", "Rs. 895", "Rs. 650"
+    ];
+const productDiscountTwo =
+    [
+        "Rs. 699 ", "Rs. 1,999", "Rs. 800", "Rs. 500", "Rs. 2,000", "",
+        "Rs. 699 ", "Rs. 1,999", "Rs. 800", "Rs. 500", "Rs. 2,000", ""
+    ];
+const productDiscountPerTwo =
+    [
+        "-50%", "-55%", "-77%", "-35%", "-55%", "",
+        "-50%", "-55%", "-77%", "-35%", "-55%", ""
+    ];
+
+
+let productHolderTwo = "";
+for (let i = 0; i < productTitleTwo.length; i++) {
+    productHolderTwo +=
+        `
+        <a href="#" class="card-container">
+            <div class="card-img">
+                <img src="images/prod/${productImageTwo[i]}" alt="${productImageTwo[i]}">
+            </div>
+            <div class="card-info">
+                <div class="title">
+                    ${productTitleTwo[i]}
+                </div>
+                <div class="price">
+                    ${productPriceTwo[i]}
+                </div>
+                <div class="discount">
+                    <p>${productDiscountTwo[i]} </p>
+                    <span id="discount-text">${productDiscountPerTwo[i]}</span>
+                </div>
+            </div>
+        </a>
+    `;
+}
+productsElTwo.innerHTML = productHolderTwo;

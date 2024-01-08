@@ -375,6 +375,7 @@ header {
 }
 
 .card-info {
+    height: calc(290px - 188px);
     width: 188px;
     padding: 6px;
     background-color: var(--full-white);
@@ -523,4 +524,28 @@ header {
 .cat-heading {
     font-size: 0.9rem;
     line-height: 1.1rem;
+}
+
+
+/* JUST FOR YOU SECTION  */
+.product-section-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* FOOTER SECTION*/
+footer {
+    height: 150px;
+    background-color: #f1f1f1;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer {
+    text-align: center;
 }
