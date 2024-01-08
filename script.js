@@ -205,3 +205,48 @@ vendorEl.innerHTML = shopHolder;
 
 // CATEGORY MALL -- START product-section-one
 const catEl = document.querySelector("#cat-section-el");
+
+const catImg =
+    [
+        'prod1.jpg', 'prod2.jpg', 'prod3.jpg', 'prod4.jpg', 'prod5.jpg', 'prod6.jpg', 'prod7.jpg', 'prod8.jpg',
+        'prod9.jpg', 'prod10.png', 'prod11.jpg', 'prod12.jpg', 'prod13.jpg', 'prod14.jpg', 'prod15.jpg', 'prod16.jpg',
+    ];
+
+const catProductName =
+    [
+        "Sneakers", "Leggings", "Cups, Mugs & Saucers", "Hair Accessories", "Serum & Essense", "Face Masks",
+        "Water Heaters", "Cleaning Products", "Bath Towels", "Art Pads & Diaries", "Cleaning Gloves", "Calculators", "Black Tea", "Compression Bags", "Herbs & Spices", "Gloves"
+    ]
+
+let catHolder = "";
+for (let i = 0; i < catImg.length; i++) {
+    catHolder +=
+        `
+            <div class="category-item-lists">
+                
+                <img src="images/category/${catImg[i]}" alt="${catImg[i]}" width="80px" height="80px">
+                <p class="cat-heading">${catProductName[i]}</p>
+            </div>
+        `;
+}
+catEl.innerHTML = catHolder;
+
+// JUST FOR YOU
+// DARAZ MALL -- START product-section-one
+const forYouEl = document.querySelector("#for-you-section-el");
+
+// const forYouProductImg =
+//     [
+//         "prod1.jpg", "prod2.jpg", "prod3.jpg", "prod4.jpg", "prod5.jpg", "prod6.jpg"
+//     ];
+// const forYouImg =
+//     [
+//         "sell1.png", "sell2.png", "sell3.jpeg", "sell4.png", "sell5.jpeg", "sell6.png"
+//     ];
+// const forYouName =
+//     [
+//         "Chicco", "Bagmati Plastics", "Pulchowki Books", "Fancyra", "Viopatch", "Naturo Earth"
+//     ];
+// const forYouSlogan = [
+//     "Chicco", "Bagmati Plastics", "Pulchowki Books", "Feel the joy", "Muscle pain relief patch", "Natural Products"
+// ]
