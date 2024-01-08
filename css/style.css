@@ -38,7 +38,6 @@ section {
 body {
     margin: auto;
     padding: auto;
-    height: 200vh;
     font-family: 'Roboto', 'Helvetica';
     background-color: var(--bg-white);
     /* background-color: black; */
@@ -47,6 +46,9 @@ body {
 /* top nav bar */
 header {
     background-color: var(--bg-header);
+    position: sticky;
+    top: 0;
+    z-index: 99999;
 }
 
 .navbar {
@@ -544,6 +546,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    color: var(--clr-title);
 }
 
 .footer {
